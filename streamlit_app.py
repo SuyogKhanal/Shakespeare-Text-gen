@@ -53,7 +53,7 @@ def main():
     st.title('Text Generation')
     start_string = st.text_input('Enter Starting Text')
     num_generate = st.selectbox('Select Number of Characters to Generate', range(400, 1001, 100), index=0)
-    temperature = st.slider('Select Temperature', 0.1, 1.0, 1.0, 0.1)
+    temperature = st.slider('Select Fuzziness', 0.1, 1.0, 1.0, 0.1)
     generate_button = st.button('Generate')
 
     if generate_button:
