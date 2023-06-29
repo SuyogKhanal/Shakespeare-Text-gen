@@ -1,5 +1,4 @@
 from flask import Flask, render_template, request
-from tensorflow.keras.models import load_model
 import tensorflow as tf
 import pathlib
 import numpy as np
@@ -23,7 +22,7 @@ vocab = sorted(set(text))
 char2index = {char: index for index, char in enumerate(vocab)}
 index2char = np.array(vocab)
 
-model = load_model('text_generation_shakespeare_rnn.h5', compile=False)
+model = tf.keras.models.load_model('text_generation_shakespeare_rnn.h5', compile=False)
 
 
 @app.route('/')
