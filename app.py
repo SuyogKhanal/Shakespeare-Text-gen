@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-from tensorflow.python.keras.models import load_model
+from tensorflow.keras.models import load_model
 import tensorflow as tf
 import pathlib
 import numpy as np
