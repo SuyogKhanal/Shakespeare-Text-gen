@@ -1,4 +1,3 @@
-from tensorflow.python.keras.models import load_model
 import tensorflow as tf
 import pathlib
 import numpy as np
@@ -22,7 +21,7 @@ char2index = {char: index for index, char in enumerate(vocab)}
 index2char = np.array(vocab)
 
 
-model = load_model('text_generation_shakespeare_rnn.h5',compile=False)
+model = tf.keras.models.load_model('text_generation_shakespeare_rnn.h5',compile=False)
 
 def generate_text(start_string, num_generate = 1000, temperature=1.0):
     
