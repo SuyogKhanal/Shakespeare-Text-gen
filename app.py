@@ -22,7 +22,7 @@ vocab = sorted(set(text))
 char2index = {char: index for index, char in enumerate(vocab)}
 index2char = np.array(vocab)
 
-model = tf.keras.models.load_model('text_generation_shakespeare_rnn.h5', compile=False)
+model = tf.saved_model.load('text_generation_shakespeare_rnn.h5')
 
 
 @app.route('/')
