@@ -5,9 +5,6 @@ import numpy as np
 import warnings
 
 warnings.filterwarnings('ignore')
-
-app = Flask(__name__,template_folder='template')
-
 cache_dir = './tmp'
 dataset_file_name = 'shakespeare.txt'
 dataset_file_origin = 'https://storage.googleapis.com/download.tensorflow.org/data/shakespeare.txt'
@@ -22,7 +19,10 @@ vocab = sorted(set(text))
 char2index = {char: index for index, char in enumerate(vocab)}
 index2char = np.array(vocab)
 
-model = tf.saved_model.load('text_generation_shakespeare_rnn.h5')
+model = tf.keras.models.load_model('text_generation_shakespeare_rnn.h5')
+
+
+app = Flask(__name__,template_folder='template')
 
 
 @app.route('/')

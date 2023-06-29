@@ -1,4 +1,3 @@
 Flask
-keras_nightly
 numpy
 tensorflow
