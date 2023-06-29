@@ -1,4 +1,4 @@
-Flask==2.2.3
-keras_nightly==2.5.0.dev2021032900
-numpy==1.19.2
-tensorflow==2.5.0
+Flask
+keras_nightly
+numpy
+tensorflow
